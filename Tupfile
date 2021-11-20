@@ -1,1 +1,3 @@
-: src/Main.o |> g++ %f -o %o -Wall |> bin/guess-word
+LFLAGS = -L../third/docopt.cpp -ldocopt
+
+: src/Main.o |> g++ %f -o %o -Wall $(LFLAGS) |> bin/guess-word
