@@ -1,0 +1,1 @@
+: src/Main.o |> g++ %f -o %o -Wall |> bin/guess-word

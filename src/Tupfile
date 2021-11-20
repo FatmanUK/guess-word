@@ -1,0 +1,9 @@
+CFLAGS =
+
+ifeq (@(NDEBUG),1)
+	CFLAGS += -DNDEBUG
+else
+	CFLAGS += -g
+endif
+
+: foreach *.cc |> g++ -c %f $(CFLAGS) |> %B.o
