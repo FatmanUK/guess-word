@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Tup build system ignores
+.tup/
+build-*/
+bin/
