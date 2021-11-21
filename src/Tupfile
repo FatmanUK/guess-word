@@ -1,7 +1,7 @@
-CFLAGS = -I../third/docopt.cpp
+CFLAGS = -I../include -I../third/docopt.cpp -DCONFDIR='"@(CONFDIR)"'
 
 ifeq (@(NDEBUG),1)
-	CFLAGS += -DNDEBUG
+	CFLAGS += -DNDEBUG -s -O0
 else
 	CFLAGS += -g
 endif
